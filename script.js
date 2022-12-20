@@ -1,57 +1,61 @@
 $('#example1').calendar();
 $('#example2').calendar({
-  type: 'date'
+    type: 'date'
 });
 $('#example3').calendar({
-  type: 'time'
+    type: 'time'
 });
+
 $('#rangestart').calendar({
-  type: 'date',
-  endCalendar: $('#rangeend')
+    type: 'date',
+    endCalendar: $('#rangeend')
 });
+
 $('#rangeend').calendar({
-  type: 'date',
-  startCalendar: $('#rangestart')
+    type: 'date',
+    startCalendar: $('#rangestart')
 });
+
 $('#example4').calendar({
-  startMode: 'year'
+    startMode: 'year'
 });
 $('#example5').calendar();
 $('#example6').calendar({
-  ampm: false,
-  type: 'time'
+    ampm: false,
+    type: 'time'
 });
 $('#example7').calendar({
-  type: 'month'
+    type: 'month'
 });
 $('#example8').calendar({
-  type: 'year'
+    type: 'year'
 });
 $('#example9').calendar();
 $('#example10').calendar({
-  on: 'hover'
+    on: 'hover'
 });
+
 var today = new Date();
 $('#example11').calendar({
-  minDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() - 5),
-  maxDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 5)
+    minDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() - 5),
+    maxDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 5)
 });
 $('#example12').calendar({
-  monthFirst: false
+    monthFirst: false
 });
 $('#example13').calendar({
-  monthFirst: false,
-  formatter: {
-    date: function (date, settings) {
-      if (!date) return '';
-      var day = date.getDate();
-      var month = date.getMonth() + 1;
-      var year = date.getFullYear();
-      return day + '/' + month + '/' + year;
+    monthFirst: false,
+    formatter: {
+        date: function (date, settings) {
+            if (!date) return '';
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+            return day + '/' + month + '/' + year;
+        }
     }
-  }
 });
 $('#example14').calendar({
-  inline: true
+    inline: true
 });
 $('#example15').calendar();
